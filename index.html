@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Pizzaria</title>
+</head>
+
+<body>
+    <section class="hb-section">
+        <div class="header" id="myHeader">
+            <div class="hamburger" onclick="openNav()">
+                <div class="ham-one"></div>
+                <div class="ham-two"></div>
+                <div class="ham-three"></div>
+            </div>
+
+            <div class="responsive-nav" id="responsive-side">
+                <a href="javascript:void(0)" onclick="closeNavibar()" class="close close-btn"></a>
+                <ul class="responsive-navigation">
+                    <li class="menu-item"><a href="browse.html">Browse Food</a></li>
+                    <li class="menu-item"><a href="#">Download App</a></li>
+                    <li class="menu-item"><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="left-head" onclick="mainpage()">
+                <img src="images/pizzaria-logo.png" height="40px" alt="">
+                <h2 class="pizzaria">PIZZARIA</h2>
+            </div>
+            <!-- <div class="nav-section"> -->
+            <nav class="nav-section">
+                <ul class="nav-ul">
+                    <li><a href="browse.html">Browse Food</a></li>
+                    <li>Download App</li>
+                    <li>About Us</li>
+                </ul>
+            </nav>
+            <!-- </div> -->
+            <div class="right-head">
+                <ul class="user-links">
+                    <li class="header-shop-cart" onmouseover="openMenuBox()" onmouseout="closeMenuBox()">
+                        <i class="las la-shopping-bag"></i>
+                        <div class="menu-box" id="menu-id">
+                            <div class="menu-content">
+                                <div class="container scroll">
+                                    <div class="row">
+                                        <div class="cart-img col-6">
+                                        </div>
+                                        <div class="cart-content col-6">
+                                            <h4>
+                                                <a href="#">Lamb Chops Handi</a>
+                                            </h4>
+                                            <div class="cart-price">
+                                                <span class="new">$250</span>&nbsp;
+                                                <span><del>$350</del></span>
+                                            </div>
+                                            <div class="number">
+                                                <span class="minus">-</span>
+                                                <span class="num-one">1</span>
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <div class="delete">
+                                                <a href="#">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cart-img-two col-6">
+                                        </div>
+                                        <div class="cart-content col-6">
+                                            <h4>
+                                                <a href="#">Fettuccine Pasta</a>
+                                            </h4>
+                                            <div class="cart-price">
+                                                <span class="new">$350</span>&nbsp;
+                                                <span><del>$450</del></span>
+                                            </div>
+                                            <div class="number">
+                                                <span class="minus">-</span>
+                                                <span class="num-one">1</span>
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <div class="delete">
+                                                <a href="#">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cart-img-three col-6">
+                                        </div>
+                                        <div class="cart-content col-6">
+                                            <h4>
+                                                <a href="#">Meatball Spaghetti</a>
+                                            </h4>
+                                            <div class="cart-price">
+                                                <span class="new">$300</span>&nbsp;
+                                                <span><del>$390</del></span>
+                                            </div>
+                                            <div class="number">
+                                                <span class="minus">-</span>
+                                                <span class="num-one">1</span>
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <div class="delete">
+                                                <a href="#">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hr"></div>
+                                <h3 class="total-price">$900</h3>
+                                <button class="checkout">CHECKOUT</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="user-menu-cart" onmouseover="openCartBox()" onmouseout="closeCartBox()">
+                        <i class="far fa-user"></i>
+                        <i class="las la-angle-down ml-1"></i>
+                        <div class="dropdown" id="ddid">
+                            <ul class="dropdown-list">
+                                <li onmouseover="shiftFirstli()" onmouseout="unshiftFirstli()">
+                                    <div class="info-menu">
+                                        <a href="#">
+                                            <i class="lni lni-key" id="first-li"></i>
+                                            Login
+                                        </a>
+                                    </div>
+                                </li>
+                                <li onmouseover="shiftSecondli()" onmouseout="unshiftSecondli()">
+                                    <div class="info-menu">
+                                        <a href="#">
+                                            <i class="lni lni-pointer-right" id="second-li"></i>
+                                            Register
+                                        </a>
+                                    </div>
+                                </li>
+                                <li onmouseover="shiftThirdli()" onmouseout="unshiftThirdli()">
+                                    <div class="info-menu">
+                                        <a href="#">
+                                            <i class="lni lni-user" id="third-li"></i>
+                                            Account
+                                        </a>
+                                    </div>
+                                </li>
+                                <li onmouseover="shiftFourthli()" onmouseout="unshiftFourthli()">
+                                    <div class="info-menu">
+                                        <a href="#">
+                                            <i class="lni lni-lock" id="fourth-li"></i>
+                                            Logout
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="animate__animated animate__backInDown animate__delay-1s">
+                <h4 class="banner-head">WIDE OPTIONS OF CHOICE</h4>
+                <h1 class="banner-main-head">PIZZA & PASTA</h1>
+                <button class="btn-order">ORDER NOW</button>
+            </div>
+        </div>
+    </section>
+    <section class="parallax-section">
+        <div class="parallax-box">
+            <div id="bg-img">
+
+            </div>
+            <div class="top-parallax">
+                <img src="images/Sandwich.png" height="170px" class="left-sandwich" alt="">
+                <h3 class="parallax-head">WHY CHOOSE US</h3>
+                <img src="images/pasta_PNG58.png" height="170px" class="right-pasta" alt="">
+            </div>
+            <div class="container parallax-body">
+                <div class="row parallax-row">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="row-head">Refreshing Breakfast
+                        <p class="row-para">Lorem ipsum dolor sit ametcons
+                            ecteturadipis icing elit.</p>
+
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="row-head">Awesome Lunch
+                        <p class="row-para">Lorem ipsum dolor sit ametcons
+                            ecteturadipis icing elit.</p>
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="row-head">Soothing Dinner
+                        <p class="row-para">Lorem ipsum dolor sit ametcons
+                            ecteturadipis icing elit.</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="row-head">Rich Quality Buffet
+                        <p class="row-para">Lorem ipsum dolor sit ametcons
+                            ecteturadipis icing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="dish-section">
+        <div class="dish-box">
+            <img src="images/Fresh-tomatoes-on-transparent-background-PNG.png" alt="">
+            <h3 class="dish-head">Our Top Rated Dishes</h3>
+            <div class="container top-dish">
+                <div class="row dish-row">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="images/Margherita.png" alt="" height="180px">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/pg-margherita-pizza-1611491820.jpg" height="180px" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="images/Pizza-margherita.jpg" height="180px" alt="">
+                                </div>
+                            </div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev food-menu-prev"></div>
+                            <div class="swiper-button-next food-menu-next"></div>
+                        </div>
+                        <p class="caption">Pizza Margherita</p>
+                    </div>
+                    <div class="col-md-6  col-xl-4">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="images/Lebanese.png" alt="" height="180px">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/lebanese 2.jpg" height="180px" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="images/lebanese 3.jpg" height="180px" alt=""></div>
+                            </div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev food-menu-prev"></div>
+                            <div class="swiper-button-next food-menu-next"></div>
+                        </div>
+                        <p class="caption">Lebanese Subway</p>
+                    </div>
+                    <div class="col-md-6 col-xl-4 fm-speciality">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="images/italian.png" alt="" height="180px">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/italian 2.jpg" height="180px" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="images/italian 3.jpg" height="180px" alt=""></div>
+                            </div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev food-menu-prev"></div>
+                            <div class="swiper-button-next food-menu-next"></div>
+                        </div>
+                        <p class="caption">Italian Pasta</p>
+                    </div>
+                    <div class="col-md-6 col-xl-4 fm-offer">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="images/chicken sandwich.png" alt="" height="180px">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/chicken sandwich 2.png" height="180px" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="images/chicken sandwich 3.png" height="180px"
+                                        alt="">
+                                </div>
+                            </div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev food-menu-prev"></div>
+                            <div class="swiper-button-next food-menu-next"></div>
+                        </div>
+                        <p class="caption">Chicken Sandwich</p>
+                    </div>
+                    <div class="col-md-6 col-xl-4 ">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="images/White Pasta.png" alt="" height="180px">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/white-sauce-pasta-restaurant-style-recipe-main-photo.jpg"
+                                        height="180px" alt="">
+                                </div>
+                                <div class="swiper-slide"><img src="images/White Pasta 3.png" height="180px" alt="">
+                                </div>
+                            </div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev food-menu-prev"></div>
+                            <div class="swiper-button-next food-menu-next"></div>
+                        </div>
+                        <p class="caption">White Sauce Pasta</p>
+                    </div>
+                    <div class="col-md-6 col-xl-4 fm-offer">
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="images/barbeque pizza.png" alt="" height="180px">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/bbq-chicken-pizza-gourmet-barbeque-sauce-grilled-red-onions-cheese-cilantro-32425293.jpg"
+                                        height="180px" alt="">
+                                </div>
+                                <div class="swiper-slide"><img
+                                        src="images/deliocuous-chicken-cheese-burst-pizza-extra-cheese-black-olive-chicken-cheese-burst-pizza-128718852.jpg"
+                                        height="180px" alt=""></div>
+                            </div>
+
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev food-menu-prev"></div>
+                            <div class="swiper-button-next food-menu-next"></div>
+                        </div>
+                        <p class="caption">Barbeque Cheese Pizza</p>
+                    </div>
+                </div>
+
+            </div>
+            <button class="btn-menu">See Today's Menu</button>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <section class="chef-section">
+        <h3 class="chef-head">Meet Our Qualified Chefs</h3>
+        <div class="chef-box container">
+            <div class="swiper chef-swiper">
+
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/chef 1.png" height="380px" alt="">
+                        <h5 class="chef-name">Tom Hardy</h5>
+                        <p>Head Chef</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/chef 2.png" height="380px" alt="">
+                        <h5 class="chef-name">Manisha Singh</h5>
+                        <p>Executive Chef</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/chef 3.png" height="380px" alt="">
+                        <h5 class="chef-name">Anne Gomes</h5>
+                        <p>Station Chef</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/chef 4.png" height="380px" alt="">
+                        <h5 class="chef-name">Arvin Zhang</h5>
+                        <p>Junior Chef</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/chef 5.jpg.png" height="380px" alt="">
+                        <h5 class="chef-name">Gavin Thomas</h5>
+                        <p>Master Chef</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/chef 6.jpg.png" height="380px" alt="">
+                        <h5 class="chef-name">Abhishek Reddy</h5>
+                        <p>Assistant Chef</p>
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev chef-prev"></div>
+                <div class="swiper-button-next chef-next"></div>
+            </div>
+
+        </div>
+    </section>
+    <section class="footer-section">
+        <div class="footer-box">
+            <img src="images/pizzaria-logo.png" alt="" class="pizz-logo">
+            <h3 class="pizza-text">PIZZARIA</h3>
+            <ul class="nav-list">
+                <li>
+                    <p>Address</p>
+                    <address>56B, D.K Sen Road, Kol-56</address>
+                </li>
+                <li>
+                    <p>Phone</p>
+                    <a href="tel:+918952465878">8952465878</a>
+                </li>
+                <li>
+                    <p>Email</p>
+                    <a href="mailto: email@example.com">pizzaria@gmail.com</a>
+                </li>
+                <li>
+                    <p>Follow</p>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                </li>
+            </ul>
+            <p class="copyright">Copyright ©2022 All rights reserved</p>
+            <img src="images/footer-bg.png" alt="" width="100%" class="foot-bg">
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

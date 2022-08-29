@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/browse-style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <section class="hb-section">
+        <div class="header" id="myHeader">
+            <div class="hamburger" onclick="openNav()">
+                <div class="ham-one"></div>
+                <div class="ham-two"></div>
+                <div class="ham-three"></div>
+            </div>
+
+            <div class="responsive-nav" id="responsive-side">
+                <a href="javascript:void(0)" onclick="closeNavibar()" class="close close-btn"></a>
+                <ul class="responsive-navigation">
+                    <li class="menu-item"><a href="#">Browse Food</a></li>
+                    <li class="menu-item"><a href="#">Download App</a></li>
+                    <li class="menu-item"><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="left-head" onclick="mainpage()">
+                <img src="images/pizzaria-logo.png" height="40px" alt="">
+                <h2 class="pizzaria">PIZZARIA</h2>
+            </div>
+            <!-- <div class="nav-section"> -->
+            <nav class="nav-section">
+                <ul class="nav-ul">
+                    <li>Browse Food</li>
+                    <li>Download App</li>
+                    <li>About Us</li>
+                </ul>
+            </nav>
+            <!-- </div> -->
+            <div class="right-head">
+                <ul class="user-links">
+                    <li class="header-shop-cart" onmouseover="openMenuBox()" onmouseout="closeMenuBox()">
+                        <i class="las la-shopping-bag"></i>
+                        <div class="menu-box" id="menu-id">
+                            <div class="menu-content">
+                                <div class="container scroll">
+                                    <div class="row">
+                                        <div class="cart-img col-6">
+                                        </div>
+                                        <div class="cart-content col-6">
+                                            <h4>
+                                                <a href="#">Lamb Chops Handi</a>
+                                            </h4>
+                                            <div class="cart-price">
+                                                <span class="new">$250</span>&nbsp;
+                                                <span><del>$350</del></span>
+                                            </div>
+                                            <div class="number">
+                                                <span class="minus">-</span>
+                                                <span class="num-one">1</span>
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <div class="delete">
+                                                <a href="#">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cart-img-two col-6">
+                                        </div>
+                                        <div class="cart-content col-6">
+                                            <h4>
+                                                <a href="#">Fettuccine Pasta</a>
+                                            </h4>
+                                            <div class="cart-price">
+                                                <span class="new">$350</span>&nbsp;
+                                                <span><del>$450</del></span>
+                                            </div>
+                                            <div class="number">
+                                                <span class="minus">-</span>
+                                                <span class="num-one">1</span>
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <div class="delete">
+                                                <a href="#">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cart-img-three col-6">
+                                        </div>
+                                        <div class="cart-content col-6">
+                                            <h4>
+                                                <a href="#">Meatball Spaghetti</a>
+                                            </h4>
+                                            <div class="cart-price">
+                                                <span class="new">$300</span>&nbsp;
+                                                <span><del>$390</del></span>
+                                            </div>
+                                            <div class="number">
+                                                <span class="minus">-</span>
+                                                <span class="num-one">1</span>
+                                                <span class="plus">+</span>
+                                            </div>
+                                            <div class="delete">
+                                                <a href="#">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hr"></div>
+                                <h3 class="total-price">$900</h3>
+                                <button class="checkout">CHECKOUT</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="user-menu-cart" onmouseover="openCartBox()" onmouseout="closeCartBox()">
+                        <i class="far fa-user"></i>
+                        <i class="las la-angle-down ml-1"></i>
+                        <div class="dropdown" id="ddid">
+                            <ul class="dropdown-list">
+                                <li onmouseover="shiftFirstli()" onmouseout="unshiftFirstli()">
+                                    <div class="info-menu">
+                                        <a href="#">
+                                            <i class="lni lni-key" id="first-li"></i>
+                                            Login
+                                        </a>
+                                    </div>
+                                </li>
+                                <li onmouseover="shiftSecondli()" onmouseout="unshiftSecondli()">
+                                    <div class="info-menu">
+                                        <a href="#">
+                                            <i class="lni lni-pointer-right" id="second-li"></i>
+                                            Register
+                                        </a>
+                                    </div>
+                                </li>
+                                <li onmouseover="shiftThirdli()" onmouseout="unshiftThirdli()">
+                                    <div class="info-menu">
+                                        <a href="#">
+                                            <i class="lni lni-user" id="third-li"></i>
+                                            Account
+                                        </a>
+                                    </div>
+                                </li>
+                                <li onmouseover="shiftFourthli()" onmouseout="unshiftFourthli()">
+                                    <div class="info-menu">
+                                        <a href="#">
+                                            <i class="lni lni-lock" id="fourth-li"></i>
+                                            Logout
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="banner">
+                    <h1 class="banner-text">
+                        <span style="--i:1">E</span><span style="--i:2">X</span><span style="--i:3">P</span><span style="--i:4">L</span><span style="--i:5">O</span><span style="--i:6">R</span><span style="--i:7">E</span>
+                        <span style="--i:8">F</span><span style="--i:9">O</span><span style="--i:10">O</span><span style="--i:11">D</span><span style="--i:12">S</span>
+                    </h1>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="banner banner-two">
+                    <h1 class="banner-text">
+                        <span style="--i:1">E</span><span style="--i:2">X</span><span style="--i:3">P</span><span style="--i:4">L</span><span style="--i:5">O</span><span style="--i:6">R</span><span style="--i:7">E</span>
+                        <span style="--i:8">F</span><span style="--i:9">O</span><span style="--i:10">O</span><span style="--i:11">D</span><span style="--i:12">S</span>
+                    </h1>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="banner banner-three">
+                    <h1 class="banner-text">
+                        <span style="--i:1">E</span><span style="--i:2">X</span><span style="--i:3">P</span><span style="--i:4">L</span><span style="--i:5">O</span><span style="--i:6">R</span><span style="--i:7">E</span>
+                        <span style="--i:8">F</span><span style="--i:9">O</span><span style="--i:10">O</span><span style="--i:11">D</span><span style="--i:12">S</span>
+                    </h1>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="banner banner-four">
+                    <h1 class="banner-text">
+                        <span style="--i:1">E</span><span style="--i:2">X</span><span style="--i:3">P</span><span style="--i:4">L</span><span style="--i:5">O</span><span style="--i:6">R</span><span style="--i:7">E</span>
+                        <span style="--i:8">F</span><span style="--i:9">O</span><span style="--i:10">O</span><span style="--i:11">D</span><span style="--i:12">S</span>
+                    </h1>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="banner banner-five">
+                    <h1 class="banner-text">
+                        <span style="--i:1">E</span><span style="--i:2">X</span><span style="--i:3">P</span><span style="--i:4">L</span><span style="--i:5">O</span><span style="--i:6">R</span><span style="--i:7">E</span>
+                        <span style="--i:8">F</span><span style="--i:9">O</span><span style="--i:10">O</span><span style="--i:11">D</span><span style="--i:12">S</span>
+                    </h1>
+                </div>
+              </div>
+            </div>
+        
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev banner-prev"></div>
+            <div class="swiper-button-next banner-next"></div>
+          </div>
+        
+    </section>
+
+    <section class="body-section">
+        <div class="body-top-sec">
+            <div class="explore-sec">
+                <ul>
+                    <li class="li-active">
+                        <a href="#">
+                            <span class="icon"><i class="lni lni-service"></i></span>
+                            <span class="text">ALL</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="lni lni-burger"></i></span>
+                            <span class="text">APPETISERS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="lni lni-coffee-cup"></i></span>
+                            <span class="text">STARTERS</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="lni lni-dinner"></i></span>
+                            <span class="text">MAIN COURSES</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="lni lni-pizza"></i></span>
+                            <span class="text">SIDE DISHES</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="lni lni-cake"></i></span>
+                            <span class="text">DESSERTS</span>
+                        </a>
+                    </li>
+                </ul>
+                <p>You have <span>21,767</span> recipes to explore</p>
+            </div>
+            <div class="country-sec">
+                <i class="lni lni-world-alt"></i>
+                <form action="">
+                    <select id="dropdown" name="dropdown">
+                        <option value="com" style="background-color: #7b7c7d; color: #000;">ALL COUNTRIES</option>
+                        <option value="com">Indian</option>
+                        <option value="com">Italian</option>
+                        <option value="com">Mexican</option>
+                        <option value="com">Chinese</option>
+                        <option value="com">Continental</option>
+                        <option value="com">Korean</option>
+                    </select>
+                    <!-- <span><i class="las la-angle-down ml-1"></i></span> -->
+                </form>
+
+            </div>
+        </div>
+
+        <div class="main-sec">
+            <div class="left-food-sec">
+                <div class="food-card">
+                    <div class="img img-hover"></div>
+                    <h3 class="card-head">Pasta alla Carbonara</h3>
+                    <!-- <p>Suzi Perry <span> in main courses</span></p> -->
+                    <div class="dash"></div>
+                    <div class="food-bottom">
+                        <div class="food-bottom-one icon-hover">
+                            <i class="far fa-comment"></i>
+                            <span>29</span>
+                        </div>
+                        <div class="food-bottom-two icon-hover">
+                            <i class="far fa-heart"></i>
+                            <span>34</span>
+                        </div>
+                        <div class="map icon-hover"></div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="img-two img-hover"></div>
+                    <h3 class="card-head">Lamb Chops Handi</h3>
+                    <!-- <p>Suzi Perry <span> in main courses</span></p> -->
+                    <div class="dash"></div>
+                    <div class="food-bottom">
+                        <div class="food-bottom-one icon-hover">
+                            <i class="far fa-comment"></i>
+                            <span>35</span>
+                        </div>
+                        <div class="food-bottom-two icon-hover">
+                            <i class="far fa-heart"></i>
+                            <span>45</span>
+                        </div>
+                        <div class="map-two icon-hover"></div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="img-three img-hover"></div>
+                    <h3 class="card-head">Bibimbap</h3>
+                    <!-- <p>Suzi Perry <span> in appetisers</span></p> -->
+                    <div class="dash"></div>
+                    <div class="food-bottom">
+                        <div class="food-bottom-one icon-hover">
+                            <i class="far fa-comment"></i>
+                            <span>30</span>
+                        </div>
+                        <div class="food-bottom-two icon-hover">
+                            <i class="far fa-heart"></i>
+                            <span>38</span>
+                        </div>
+                        <div class="map-three icon-hover"></div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="img-four img-hover"></div>
+                    <h3 class="card-head">Creamy Chicken & pasta</h3>
+                    <!-- <p>Suzi Perry <span> in appetisers</span></p> -->
+                    <div class="dash"></div>
+                    <div class="food-bottom">
+                        <div class="food-bottom-one icon-hover">
+                            <i class="far fa-comment"></i>
+                            <span>32</span>
+                        </div>
+                        <div class="food-bottom-two icon-hover">
+                            <i class="far fa-heart"></i>
+                            <span>40</span>
+                        </div>
+                        <div class="map-four icon-hover"></div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="img-five img-hover"></div>
+                    <h3 class="card-head">Fancy Toast</h3>
+                    <!-- <p>Suzi Perry <span> in appetisers</span></p> -->
+                    <div class="dash"></div>
+                    <div class="food-bottom">
+                        <div class="food-bottom-one icon-hover">
+                            <i class="far fa-comment"></i>
+                            <span>30</span>
+                        </div>
+                        <div class="food-bottom-two icon-hover">
+                            <i class="far fa-heart"></i>
+                            <span>33</span>
+                        </div>
+                        <div class="map-five icon-hover"></div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="img-six img-hover"></div>
+                    <h3 class="card-head">Barbeque Pizza</h3>
+                    <!-- <p>Suzi Perry <span> in appetisers</span></p> -->
+                    <div class="dash"></div>
+                    <div class="food-bottom">
+                        <div class="food-bottom-one icon-hover">
+                            <i class="far fa-comment"></i>
+                            <span>38</span>
+                        </div>
+                        <div class="food-bottom-two icon-hover">
+                            <i class="far fa-heart"></i>
+                            <span>45</span>
+                        </div>
+                        <div class="map-six icon-hover"></div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="img-seven img-hover"></div>
+                    <h3 class="card-head">Fruit waffles and coffee</h3>
+                    <!-- <p>Suzi Perry <span> in appetisers</span></p> -->
+                    <div class="dash"></div>
+                    <div class="food-bottom">
+                        <div class="food-bottom-one icon-hover">
+                            <i class="far fa-comment"></i>
+                            <span>28</span>
+                        </div>
+                        <div class="food-bottom-two icon-hover">
+                            <i class="far fa-heart"></i>
+                            <span>32</span>
+                        </div>
+                        <div class="map-seven icon-hover"></div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="img-eight img-hover"></div>
+                    <h3 class="card-head">Capellini tomato sauce</h3>
+                    <!-- <p>Suzi Perry <span> in appetisers</span></p> -->
+                    <div class="dash"></div>
+                    <div class="food-bottom">
+                        <div class="food-bottom-one icon-hover">
+                            <i class="far fa-comment"></i>
+                            <span>35</span>
+                        </div>
+                        <div class="food-bottom-two icon-hover">
+                            <i class="far fa-heart"></i>
+                            <span>30</span>
+                        </div>
+                        <div class="map-eight icon-hover"></div>
+                    </div>
+                </div>
+
+                <div class="food-card">
+                    <div class="img-nine img-hover"></div>
+                    <h3 class="card-head">Choco-Honey Mousse</h3>
+                    <!-- <p>Suzi Perry <span> in appetisers</span></p> -->
+                    <div class="dash"></div>
+                    <div class="food-bottom">
+                        <div class="food-bottom-one icon-hover">
+                            <i class="far fa-comment"></i>
+                            <span>39</span>
+                        </div>
+                        <div class="food-bottom-two icon-hover">
+                            <i class="far fa-heart"></i>
+                            <span>45</span>
+                        </div>
+                        <div class="map-nine icon-hover"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right-main-sec">
+                <div class="follow-sec">
+                    <div class="follow-head">
+                        <h4>Most Followed</h4>
+                        <span><a href="#">VIEW ALL</a></span>
+                    </div>
+                    <hr>
+                    <div class="follow-body">
+                        <img src="images/boy 1 mod.png" height="70px" alt="">
+                        <div class="follow-write">
+                            <p>Madaleena</p>
+                            <span>Cerreto Guidi (Fi), Italy</span>
+                        </div>
+                    </div>
+                    <div class="follow-body">
+                        <img src="images/girl 1 mod.png" height="70px" alt="">
+                        <div class="follow-write">
+                            <p>Suzy Perry</p>
+                            <span>United Kingdom</span>
+                        </div>
+                    </div>
+                    <div class="follow-body">
+                        <img src="images/Layer 5.png" height="70px" alt="">
+                        <div class="follow-write">
+                            <p>Matteo Allesani</p>
+                            <span>France</span>
+                        </div>
+                    </div>
+                    <div class="follow-body">
+                        <img src="images/Layer 4.png" height="70px" alt="">
+                        <div class="follow-write">
+                            <p>Alfy</p>
+                            <span>Catania, Italy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cook-sec">
+                    <div class="follow-head">
+                        <h4>I'd like to cook...</h4>
+                        <span><a href="#">VIEW ALL</a></span>
+                    </div>
+                    <hr>
+                    <ul class="cook-list">
+                        <li><a href="#">Vegetarian</a></li>
+                        <li><a href="#">Dessert</a></li>
+                        <li><a href="#">Chicken</a></li>
+                        <li><a href="#">Lamb</a></li>
+                        <li><a href="#">Pizza</a></li>
+                        <li><a href="#">Pasta</a></li>
+                        <li><a href="#">Breakfast</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="numbers-sec">
+            <ul class="num-list">
+                <li><a href="#">1</a></li>
+                <li><a href="#" class="page-active">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">11</a></li>
+                <li><a href="#">12</a></li>
+                <li><a href="#">13</a></li>
+                <li><a href="#">14</a></li>
+                <li><a href="#">15</a></li>
+                <li><a href="#">16</a></li>
+                <li><a href="#">...</a></li>
+                <li><a href="#">1079</a></li>
+                <li><a href="#">1080</a></li>
+                <li><a href="#"><i class="lni lni-arrow-right-circle"></i></a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="footer-sec">
+        <div class="footer-dash"></div>
+        <div class="foot-box">
+            <div class="left-foot">
+                <ul>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">FAQ's</a></li>
+                    <li><a href="#">Help & Feedback</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right-foot">
+                <div class="right-foot-icons">
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <p>Copyright ©2022 All rights reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

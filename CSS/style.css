@@ -48,6 +48,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* header section starts here */
@@ -137,6 +140,10 @@ body {
     transform: rotate(-45deg);
     display: block;
     position: absolute;
+}
+
+.left-head{
+    cursor: pointer;
 }
 
 .left-head>img {
@@ -430,7 +437,7 @@ body {
 
 /* banner section starts here */
 .banner {
-    padding-top: 250px;
+    /* padding-top: 250px; */
 }
 
 .banner h4 {

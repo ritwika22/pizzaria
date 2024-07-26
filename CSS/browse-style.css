@@ -553,12 +553,12 @@
 }
 
 .numbers-sec {
-    background-color: var(--card-color);
-    width: 955px;
+    /* background-color: var(--card-color); */
+    width: 100%;
     height: 70px;
     border-radius: 50px;
     margin-top: 100px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
 }
 
 .num-list {
